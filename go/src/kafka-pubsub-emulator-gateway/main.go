@@ -153,7 +153,7 @@ func main() {
 
 	rootCmd.Flags().StringVarP(&port, "port", "p", "8181", "port of kafka-pubsub-emulator-gateway.")
 	rootCmd.Flags().StringVarP(&address, "address", "a", "", "kafka pubsub emulator address. (required)")
-	rootCmd.Flags().StringVarP(&address, "cert_file_path", "c", "", "cert file path to authenticate with kafka pubsub emulator.")
+	rootCmd.Flags().StringVarP(&certFile, "cert_file_path", "c", "", "cert file path to authenticate with kafka pubsub emulator.")
 	rootCmd.MarkFlagRequired("address")
 
 	if err := rootCmd.Execute(); err != nil {
